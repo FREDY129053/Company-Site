@@ -1,0 +1,109 @@
+/* Дизайн общей информации */
+
+.intro-info {
+	background-image: url("../../styles/images/Rectangle 1.png");
+
+	width: 100%;
+	height: 95%;
+  	top: 0;
+  	left: 0;
+	position: absolute;
+
+	
+}
+
+.header {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	text-align: center;
+}
+
+.logo {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	text-align: center;
+
+	padding-left: 1%;
+	margin-right: 14%;
+}
+
+.logo a {
+	text-decoration: none;
+}
+
+.company-name {
+	font-family: 'Montserrat Alternates';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 1rem;
+	line-height: 2.5vh;
+	text-align: left;
+
+	color: #FFFFFF;
+}
+
+
+.menu ul {
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+}
+
+.menu ul:hover a:hover {
+	color: #FF8888;
+}
+
+.point {
+	font-family: 'Montserrat Alternates';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 1rem;
+	line-height: 20px;
+
+	color: #FFFFFF;
+
+	margin-left: 3vw;
+}
+
+.point:last-child {
+	margin-right: 15px;
+}
+
+.point a {
+	text-decoration: none;
+	color: #FFFFFF;
+	text-transform: none;
+	transition: .25s ease;
+}
+
+
+/* Текст */
+.who-we-are {
+	font-family: 'Montserrat', sans-serif;
+	font-family: 'Montserrat Alternates', sans-serif;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 3rem;
+	line-height: 55px;
+	text-align: right;
+
+	color: #FFFFFF;
+
+	padding-right: 8%;
+}
+
+.info {
+	font-family: 'Overpass', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 1.2rem;
+	line-height: 25px;
+	text-align: right;
+
+	color: #FFFFFF;
+
+	padding-right: 8%;
+	padding-left: 55%;
+}
