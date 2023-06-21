@@ -222,3 +222,76 @@ a {
 .desc {
 	padding-top: 7%;
 }
+
+
+/* Отзывы */
+.reviews {
+	padding-bottom: 1000px;
+}
+
+.reviews p {
+	text-align: center;
+	font-family: 'Montserrat Alternates';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 3vw;
+	line-height: 49px;
+}
+
+.container {
+	width: 100%;
+	margin: 0 auto;
+}
+
+.slider {
+	background-color: #a6a6a6;
+
+	position: relative;
+
+	height: 300px;
+}
+
+.slider-container {
+	position: relative;
+
+	width: 100%;
+	height: 100%;
+
+	overflow: hidden;
+}
+
+.slide {
+	cursor: pointer;
+
+	position: absolute;
+
+	width: 300px;
+	height: 150px;
+
+	background-color: white;
+	border: 3px solid #333333;
+
+	text-align: center;
+	line-height: 100px;
+	font-size: 35px;
+
+	transition: all .5s;
+}
+
+.slider-nav {
+	color: #333333;
+
+	position: absolute;
+
+	font-size: 40px;
+}
+
+.action-prev {
+	left: 20px;
+	bottom: 50%;
+}
+
+.action-next {
+	right: 20px;
+	bottom: 20px;
+}
