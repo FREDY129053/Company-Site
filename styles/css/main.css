@@ -181,3 +181,44 @@ a {
 	width: 145px;
 	height: 145px;
 }
+
+/* Круглый текст */
+.circle {
+	position: relative;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.circle-text, .circle-text-second, .circle-text-third {
+	position: absolute;
+	
+	animation: rotateText 10s linear infinite;
+}
+
+@keyframes rotateText
+{
+	0%
+	{
+		transform: rotate(0);
+	}
+	100%
+	{
+		transform: rotate(360deg);
+	}
+}
+
+.circle-text span, .circle-text-second span, .circle-text-third span {
+	position: absolute;
+	left: 50%;
+	top: -72px;
+
+	font-size: 1.8vw;
+
+	transform-origin: 0 100px;
+}
+
+.desc {
+	padding-top: 7%;
+}
