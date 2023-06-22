@@ -1,26 +1,41 @@
+body {
+	padding: 0;
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
 /* Дизайн общей информации */
 
+/* Задний фон блока */
 .intro-info {
 	background-image: url("../../styles/images/Rectangle 1.png");
 
-	
+
 	width: 100%;
-	height: auto;
   	top: 0;
   	left: 0;
 	background-size: cover;
-	position: absolute;
 	background-repeat: no-repeat;
 	
+	margin-bottom: 8%;
 }
 
+
+/* Навигация с логотипом */
 .header {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	text-align: center;
+	margin-left: 0;
+	margin-right: 0;
 }
 
+
+/* Логотип с названием */
 .logo {
 	display: flex;
 	flex-direction: row;
@@ -28,28 +43,121 @@
 	text-align: center;
 
 	padding-left: 1%;
-	margin-right: 14%;
-}
-
-.logo a {
-	text-decoration: none;
+	margin-right: 18%;
 }
 
 .company-name {
 	font-family: 'Montserrat Alternates';
 	font-style: normal;
 	font-weight: 700;
-	font-size: 1rem;
-	line-height: 2.5vh;
+	font-size: 1.5vw;
+	line-height: 2.7vh;
 	text-align: left;
 
 	color: #FFFFFF;
 }
 
+/* Меню навигации */
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .35s, visibility .35s, height .35s;
+    overflow: hidden;
+    background: black;
+    z-index: -1;
+}
+
+#hamburger-input{
+	display: none;
+  }
+  
+  #hamburger-menu {
+	  position: fixed;
+	  top: 20px;
+	  right: 20px;
+	  width: 50px;
+	  height: 50px;
+	  display: none;
+	  border: none;
+	  padding: 0px;
+	  margin: 0px;
+	  font-family: 'Cabin', Sans-serif;
+	  background: linear-gradient(
+		to bottom, 
+		#9b9b9b, #9b9b9b 20%, 
+		rgb(0, 0, 0) 20%, rgb(0, 0, 0) 40%, 
+		#9b9b9b 40%, #9b9b9b 60%, 
+		rgb(0, 0, 0) 60%, rgb(0, 0, 0) 80%, 
+		#9b9b9b 80%, #9b9b9b 100%
+	  );
+
+	  z-index: 999999;
+  }
+  
+  #hamburger-menu #sidebar-menu {
+	  visibility: hidden;
+	  position: fixed;
+	  top: 0;
+	  right: -250px;
+	  width: 200px;
+	  height: 100%;
+	  background-color: #8d8d8d;
+	  transition: 0.3s;
+	  padding: 0px 10px;
+	  box-sizing: border-box;
+  }
+  
+  #hamburger-menu h3 {
+	color: #ffffff;
+	font-size: 2.2rem;
+  }
+  
+  #hamburger-menu ul {
+	padding-left: 0px;
+  }
+  
+  #hamburger-menu li {
+	list-style-type: none;
+	line-height: 3rem;
+  }
+  
+  #hamburger-menu a {
+	color: #ffffff;
+	font-size: 1.3rem;
+	text-decoration: none;
+  }
+  
+  #hamburger-menu a:hover {
+	text-decoration: underline;
+  }
+  
+  #hamburger-input:checked + #hamburger-menu #sidebar-menu {
+	  visibility: visible;
+	  right: 0;
+  }
+  #hamburger-input:checked ~ .overlay{
+	 visibility: visible;
+	opacity: 0.4;
+  }
+  
+  
+  @media screen and (max-width: 1000px) {
+	.menu {
+	  display: none;
+	}
+	#hamburger-menu {
+	  display: inline;
+	}
+  }
+
 
 .menu ul {
 	display: flex;
-	flex-wrap: wrap;
 	list-style: none;
 }
 
@@ -61,16 +169,12 @@
 	font-family: 'Montserrat Alternates';
 	font-style: normal;
 	font-weight: 700;
-	font-size: 1rem;
+	font-size: 1.1vw;
 	line-height: 20px;
 
 	color: #FFFFFF;
 
-	margin-left: 3vw;
-}
-
-.point:last-child {
-	margin-right: 15px;
+	margin-left: 22.8px;
 }
 
 .point a {
@@ -87,7 +191,7 @@
 	font-family: 'Montserrat Alternates', sans-serif;
 	font-style: normal;
 	font-weight: 700;
-	font-size: 3rem;
+	font-size: 3.2vw;
 	line-height: 55px;
 	text-align: right;
 
@@ -100,7 +204,7 @@
 	font-family: 'Overpass', sans-serif;
 	font-style: normal;
 	font-weight: 400;
-	font-size: 1.2rem;
+	font-size: 1.4vw;
 	line-height: 25px;
 	text-align: right;
 
@@ -108,19 +212,434 @@
 
 	padding-right: 8%;
 	padding-left: 55%;
+	padding-bottom: 5vh;
 }
 
+
+/* Блок с нашими приемуществами */
 .advantages{
-	margin-top: 45%;
+	width: 100%;
 
 	background-image: url("../../styles/images/smoke-texture-wallpaper-dark-background\ 1.png");
-
-	
-	width: 100%;
-	height: 70%;
-	left: 0;
-	top: 0;	
 	background-size: cover;
-	position: absolute;
 	background-repeat: no-repeat;
+}
+
+.block-title {
+	font-family: 'Montserrat Alternates';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 3vw;
+	line-height: 49px;
+
+	text-align: center;
+	color: #FFFFFF;
+
+	padding-top: 3%;
+}
+
+.advantages-icons {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.advantages-icons p {
+	width: 23vw;
+
+	text-align: center;
+
+	font-family: 'Overpass';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 25px;
+
+	color: #FFFFFF;
+
+	padding-bottom: 5%;
+}
+
+.fast-icon, .cheap-icon, .good-icon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.fast, .cheaply, .good {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	border-radius: 50%;
+
+	background-color: #FFFFFF;
+	width: 145px;
+	height: 145px;
+}
+
+/* Круглый текст */
+.circle {
+	position: relative;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.circle-text, .circle-text-second, .circle-text-third {
+	position: absolute;
+	
+	animation: rotateText 10s linear infinite;
+}
+
+@keyframes rotateText
+{
+	0%
+	{
+		transform: rotate(0);
+	}
+	100%
+	{
+		transform: rotate(360deg);
+	}
+}
+
+.circle-text span, .circle-text-second span, .circle-text-third span {
+	position: absolute;
+	left: 50%;
+	top: -72px;
+
+	font-size: 1.8vw;
+
+	transform-origin: 0 100px;
+}
+
+.desc {
+	padding-top: 7%;
+}
+
+
+/* Отзывы */
+.reviews {
+	padding-bottom: 5%;
+}
+
+.reviews p {
+	text-align: center;
+	font-family: 'Montserrat Alternates';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 3vw;
+	line-height: 49px;
+}
+
+.container {
+	width: 100%;
+	margin: 0 auto;
+}
+
+.slider {
+	position: relative;
+	top: 50%;
+
+	height: 50%;
+}
+
+.slider-container {
+	position: relative;
+
+	width: 100%;
+	height: 50vh;
+
+	overflow: hidden;
+}
+
+
+/* Отзывы */
+.slide {
+	position: absolute;
+
+	width: 30vw;
+
+	background-color: white;
+	border: 3px solid #333333;
+
+	text-align: center;
+	line-height: 100px;
+	font-size: 35px;
+
+	transition: all .5s;
+}
+
+.top {
+	display: flex;
+}
+
+.profile-1 {
+	width: 60px;
+	height: 60px;
+
+	margin-left: 5px;
+	margin-top: 5px;
+
+	margin-right: 8vw;
+
+	border-radius: 50%;
+
+	background-image: url('../images/peoples/pchel1.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.profile-2 {
+	width: 60px;
+	height: 60px;
+
+	margin-left: 5px;
+	margin-top: 5px;
+
+	margin-right: 8vw;
+
+	border-radius: 50%;
+
+	background-image: url('../images/peoples/pchel2.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.profile-3 {
+	width: 60px;
+	height: 60px;
+
+	margin-left: 5px;
+	margin-top: 5px;
+
+	margin-right: 8vw;
+
+	border-radius: 50%;
+
+	background-image: url('../images/peoples/pchel3.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.profile-4 {
+	width: 60px;
+	height: 60px;
+
+	margin-left: 5px;
+	margin-top: 5px;
+
+	margin-right: 8vw;
+
+	border-radius: 50%;
+
+	background-image: url('../images/peoples/pchel4.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.profile-5 {
+	width: 60px;
+	height: 60px;
+
+	margin-left: 5px;
+	margin-top: 5px;
+
+	margin-right: 8vw;
+
+	border-radius: 50%;
+
+	background-image: url('../images/peoples/pchel5.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.profile-6 {
+	width: 60px;
+	height: 60px;
+
+	margin-left: 5px;
+	margin-top: 5px;
+
+	margin-right: 8vw;
+
+	border-radius: 50%;
+
+	background-image: url('../images/peoples/pchel6.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.profile-7 {
+	width: 60px;
+	height: 60px;
+
+	margin-left: 5px;
+	margin-top: 5px;
+
+	margin-right: 8vw;
+
+	border-radius: 50%;
+
+	background-image: url('../images/peoples/pchel7.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.profile-8 {
+	width: 60px;
+	height: 60px;
+
+	margin-left: 5px;
+	margin-top: 5px;
+
+	margin-right: 8vw;
+
+	border-radius: 50%;
+
+	background-image: url('../images/peoples/pchel8.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.profile-9 {
+	width: 60px;
+	height: 60px;
+
+	margin-left: 5px;
+	margin-top: 5px;
+
+	margin-right: 8vw;
+
+	border-radius: 50%;
+
+	background-image: url('../images/peoples/pchel9.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.slide p {
+	font-size: .8vw;
+}
+
+.user-name p {
+	font-size: 1.2vw;
+}
+
+.slider-nav {
+	color: #333333;
+
+	position: absolute;
+
+	font-size: 40px;
+}
+
+.slider iconify-icon {
+	color: black;
+
+	font-size: 2vw;
+}
+
+.action-prev {
+	left: 20px;
+	bottom: 50%;
+	z-index: 999;
+}
+
+.action-next {
+	right: 20px;
+	bottom: 50%;
+	z-index: 999;
+}
+
+
+
+/* Дно сайта */
+
+footer {
+	width: 100%;
+
+	padding-top: 4%;
+	padding-bottom: 3%;
+
+	background-color: #2F2F2F;
+
+	display: flex;
+	justify-content: space-around;
+}
+
+footer img {
+	width: 25px;
+	height: 25px;
+
+	padding-right: 15px;
+}
+
+.title-footer {
+	text-align: center;
+	font-family: 'Montserrat Alternates';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 2.5vw;
+	line-height: 49px;
+	color: #FFFFFF;
+}
+
+.mail {
+	font-family: 'Montserrat Alternates';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 1.7vw;
+	line-height: 49px;
+	color: #FFFFFF;
+}
+
+.address {
+	font-family: Montserrat Alternates;
+	font-weight: 500;
+	font-style: normal;
+	font-size: 1.5vw;
+	line-height: 49px;
+	color: #FFFFFF;
+}
+
+.telephone {
+	font-family: 'Montserrat Alternates';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 1.7vw;
+	line-height: 49px;
+	color: #FFFFFF;
+}
+
+.whatsapp {
+	font-family: 'Montserrat Alternates';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 1.7vw;
+	line-height: 49px;
+	color: #FFFFFF;
+}
+
+
+
+.social-icons {
+	padding-top: 25px;
+}
+
+.social-icons img {
+	width: 40px;
+	height: 40px;
 }

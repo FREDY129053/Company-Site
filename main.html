@@ -21,20 +21,37 @@
 	<div class="intro-info">
 		<div class="header">
 			<div class="logo">
-				<a href="#"><img class="company-logo" src="styles/images/shark logo 2.svg"></a>
-				<a href="#"><p class="company-name">Creative Design <br />Shark</p></a>
+				<a href="main.html"><img class="company-logo" src="styles/images/shark logo 2.svg"></a>
+				<a href="main.html"><p class="company-name">Creative Design<br>Shark</p></a>
 			</div>
 
 			<nav class="menu">
 				<ul>
-					<li class="point"><a href="#">Главная</a></li>
-					<li class="point"><a href="#">О нас</a></li>
-					<li class="point"><a href="#">Наши услуги</a></li>
-					<li class="point"><a href="#">Наши работы</a></li>
-					<li class="point"><a href="#">Наша команда</a></li>
-					<li class="point"><a href="#">Контакты</a></li>
+					<li class="point"><a href="main.html">Главная</a></li>
+					<li class="point"><a href="about.html">О нас</a></li>
+					<li class="point"><a href="services.html">Наши услуги</a></li>
+					<li class="point"><a href="works.html">Наши работы</a></li>
+					<li class="point"><a href="our_team.html">Наша команда</a></li>
+					<li class="point"><a href="#dno">Контакты</a></li>
 				</ul>
 			</nav>
+
+			<input type="checkbox" id="hamburger-input" class="burger-shower" />
+			<label id="hamburger-menu" for="hamburger-input">
+				<nav id="sidebar-menu">
+					<h3>Menu</h3>
+					<ul>
+						<li><a href="main.html">Главная</a></li>
+						<li><a href="about.html">О нас</a></li>
+						<li><a href="services.html">Наши услуги</a></li>
+						<li><a href="works.html">Наши работы</a></li>
+						<li><a href="our_team.html">Наша команда</a></li>
+						<li><a href="#dno">Контакты</a></li>
+					</ul>
+				</nav>
+			</label>
+
+			<div class="overlay"></div>
 		</div>
 
 		<p class="who-we-are">Мы - Creative Design <br>Shark.</p>
@@ -44,7 +61,169 @@
 	
 
 	<div class="advantages">
-		<p>Наши преимущества</p>
+		<p class="block-title">Наши преимущества</p>
+
+		<div class="advantages-icons">
+			<div class="fast-icon">
+				<div class="circle">
+					<div class="fast">
+						<img class="fast-img" src="styles/images/fast.png">
+					</div>
+					<div class="circle-text">
+						<p>БЫСТРО · БЫСТРО ·</p>
+					</div>
+				</div>
+				<p class="desc">Наша студия может доставить желаемый дизайн в краткие сроки</p>
+			</div>
+
+			<div class="cheap-icon">
+				<div class="circle">
+					<div class="cheaply">
+						<img class="cheaply-img" src="styles/images/cheaply.png">
+					</div>
+					<div class="circle-text-second">
+						<p>ДЕШЕВО · ДЕШЕВО ·</p>
+					</div>
+				</div>
+				<p class="desc">Мы стараемся устанавливать баланс цены-качества в нашей работе</p>
+			</div>
+
+			<div class="good-icon">
+				<div class="circle">
+					<div class="good">
+						<img class="good-img" src="styles/images/good.png">
+					</div>
+					<div class="circle-text-third">
+						<p> СЕРДИТО · СЕРДИТО · </p>
+					</div>
+				</div>
+				<p class="desc">У нас работают только опытные специалисты, которые знают толк в качественном брендинге</p>
+			</div>
+		</div>
 	</div>
+
+	<div class="reviews">
+		<p>Отзывы о нас</p>
+
+		<div class="container">
+			<div class="slider">
+				<div class="slider-container">
+					<div class="slide">
+						<div class="top">
+							<div class="profile-1"></div>
+							<div class="user-name">
+								<p>John Smith</p>
+							</div>
+						</div>
+						<p class="comment">Хочу выразить огромную благодарность дизайн-студии за их профессионализм и творческий подход. Они создали впечатляющий дизайн для моего сайта. Рекомендую!</p>
+					</div>
+					<div class="slide">
+						<div class="top">
+							<div class="profile-2"></div>
+							<div class="user-name">
+								<p>Ahmed Khan</p>
+							</div>
+						</div>
+						<p class="comment">Работа с вашей дизайн-студией превзошла все мои ожидания. Ваша команда создала потрясающий дизайн для моего бренда. Большое спасибо!</p>
+					</div>
+					<div class="slide">
+						<div class="top">
+							<div class="profile-3"></div>
+							<div class="user-name">
+								<p>Алексей Соколов</p>
+							</div>
+						</div>
+						<p class="comment">Я был приятно удивлен качеством работы вашей дизайн-студии. Они создали стильный и эффективный дизайн для моего сайта. Рекомендую всем!</p>
+					</div>
+					<div class="slide">
+						<div class="top">
+							<div class="profile-4"></div>
+							<div class="user-name">
+								<p>Иван Петров</p>
+							</div>
+						</div>
+						<p class="comment">Я очень доволен результатами работы вашей дизайн-студии. Ваша команда создала уникальный и современный дизайн для моего бренда. Большое спасибо!</p>
+					</div>
+					<div class="slide">
+						<div class="top">
+							<div class="profile-5"></div>
+							<div class="user-name">
+								<p>Наталья Volkova</p>
+							</div>
+						</div>
+						<p class="comment">Работать с вашей дизайн-студией было удовольствием. Они создали потрясающий дизайн для моего веб-сайта. Я очень довольна результатом!</p>
+					</div>
+					<div class="slide">
+						<div class="top">
+							<div class="profile-6"></div>
+							<div class="user-name">
+								<p>Pierre Dupont</p>
+							</div>
+						</div>
+						<p class="comment">Я впечатлен работой вашей дизайн-студии. Они создали привлекательный и инновационный дизайн для моего магазина. Большое спасибо за отличную работу!</p>
+					</div>
+					<div class="slide">
+						<div class="top">
+							<div class="profile-7"></div>
+							<div class="user-name">
+								<p>Мария Иванова</p>
+							</div>
+						</div>
+						<p class="comment">Хочу выразить благодарность вашей дизайн-студии за их творческий и инновационный подход. Они создали неповторимый дизайн для моего сайта. Рекомендую!</p>
+					</div>
+					<div class="slide">
+						<div class="top">
+							<div class="profile-8"></div>
+							<div class="user-name">
+								<p>Carlos Gómez</p>
+							</div>
+						</div>
+						<p class="comment">Я приятно удивлен работой вашей дизайн-студии. Они создали стильный и привлекательный дизайн для моего бренда. Спасибо вам за отличную работу!</p>
+					</div>
+					<div class="slide">
+						<div class="top">
+							<div class="profile-9"></div>
+							<div class="user-name">
+								<p>Денис Гусев</p>
+							</div>
+						</div>
+						<p class="comment">Ваша дизайн-студия - настоящие профессионалы в своем деле. Они создали красивый и интуитивно понятный дизайн для моего приложения. Спасибо вам!</p>
+					</div>
+				</div>
+				<a href="#" class="slider-nav action-prev" data-dir="prev"><iconify-icon icon="icon-park-outline:left"></iconify-icon></a>
+				<a href="#" class="slider-nav action-next" data-dir="next"><iconify-icon icon="icon-park-outline:right"></iconify-icon></a>
+			</div>
+		</div>
+	</div>
+
+	<footer id="dno">
+		<div class="map">
+			<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A1f75d2228c091099632eda6683c0627e369ef1a9367804941524611c413bda1c&amp;width=340&amp;height=370&amp;lang=ru_RU&amp;scroll=true"></script>
+		</div>
+
+		<div class="contacts">
+			<p class="title-footer">Контакты</p>
+			<p class="mail">CDshark@mail.ru</p>
+			<p class="address">Россия, г. Владивосток, ул. Жигура 14,<br> ул. Интернациональная 63</p>
+
+			<p>
+				<img src="styles/images/footer/Vector.svg">
+				<span class="telephone">+7 902 060 2066</span>
+			</p>
+
+			<p>
+				<img src="styles/images/footer/Whatsapp.svg">
+				<span class="whatsapp">+7 914 578 6140</span>
+			</p>
+			
+			<div class="social-icons">
+				<a href="#"><img src="styles/images/footer/Vector (3).svg"></a>
+				<a href="#"><img src="styles/images/footer/Vector (2).svg"></a>
+				<a href="#"><img src="styles/images/footer/Vector (1).svg"></a>
+			</div>
+		</div>
+	</footer>
 </body>
+<script src="js\main.js"></script>
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 </html>
