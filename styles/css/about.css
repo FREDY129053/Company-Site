@@ -1,3 +1,178 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+.header {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	text-align: center;
+	margin-left: 0;
+	margin-right: 0;
+
+	background-image: url("../../styles/images/Rectangle 1.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+
+/* Логотип с названием */
+.logo {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	text-align: center;
+
+	padding-left: 1%;
+	margin-right: 18%;
+}
+
+.company-name {
+	font-family: 'Montserrat Alternates';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 1.5vw;
+	line-height: 2.7vh;
+	text-align: left;
+
+	color: #FFFFFF;
+}
+
+
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .35s, visibility .35s, height .35s;
+    overflow: hidden;
+    background: black;
+    z-index: -1;
+}
+
+#hamburger-input{
+	display: none;
+  }
+  
+  #hamburger-menu {
+	  position: fixed;
+	  top: 20px;
+	  right: 20px;
+	  width: 50px;
+	  height: 50px;
+	  display: none;
+	  border: none;
+	  padding: 0px;
+	  margin: 0px;
+	  font-family: 'Cabin', Sans-serif;
+	  background: linear-gradient(
+		to bottom, 
+		#9b9b9b, #9b9b9b 20%, 
+		rgb(0, 0, 0) 20%, rgb(0, 0, 0) 40%, 
+		#9b9b9b 40%, #9b9b9b 60%, 
+		rgb(0, 0, 0) 60%, rgb(0, 0, 0) 80%, 
+		#9b9b9b 80%, #9b9b9b 100%
+	  );
+
+	  z-index: 999999;
+  }
+  
+  #hamburger-menu #sidebar-menu {
+	  visibility: hidden;
+	  position: fixed;
+	  top: 0;
+	  right: -250px;
+	  width: 200px;
+	  height: 100%;
+	  background-color: #8d8d8d;
+	  transition: 0.3s;
+	  padding: 0px 10px;
+	  box-sizing: border-box;
+  }
+  
+  #hamburger-menu h3 {
+	color: #ffffff;
+	font-size: 2.2rem;
+  }
+  
+  #hamburger-menu ul {
+	padding-left: 0px;
+  }
+  
+  #hamburger-menu li {
+	list-style-type: none;
+	line-height: 3rem;
+  }
+  
+  #hamburger-menu a {
+	color: #ffffff;
+	font-size: 1.3rem;
+	text-decoration: none;
+  }
+  
+  #hamburger-menu a:hover {
+	text-decoration: underline;
+  }
+  
+  #hamburger-input:checked + #hamburger-menu #sidebar-menu {
+	  visibility: visible;
+	  right: 0;
+  }
+  #hamburger-input:checked ~ .overlay{
+	 visibility: visible;
+	opacity: 0.4;
+  }
+  
+  
+  @media screen and (max-width: 1000px) {
+	.menu {
+	  display: none;
+	}
+	#hamburger-menu {
+	  display: inline;
+	}
+  }
+
+
+.menu ul {
+	display: flex;
+	list-style: none;
+}
+
+.menu ul:hover a:hover {
+	color: #FF8888;
+}
+
+.point {
+	font-family: 'Montserrat Alternates';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 1.1vw;
+	line-height: 20px;
+
+	color: #FFFFFF;
+
+	margin-left: 22.8px;
+}
+
+.point a {
+	text-decoration: none;
+	color: #FFFFFF;
+	text-transform: none;
+	transition: .25s ease;
+}
+
+
+
+
 .about
 {
     position: absolute;
@@ -151,4 +326,80 @@
     margin-top: 852px;
 
     color: #ffffff;
+}
+
+footer {
+	width: 100%;
+
+	padding-top: 4%;
+	padding-bottom: 3%;
+
+	background-color: #2F2F2F;
+
+	display: flex;
+	justify-content: space-around;
+}
+
+footer img {
+	width: 25px;
+	height: 25px;
+
+	padding-right: 15px;
+}
+
+.title-footer {
+	text-align: center;
+	font-family: 'Montserrat Alternates';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 2.5vw;
+	line-height: 49px;
+	color: #FFFFFF;
+}
+
+.mail {
+	font-family: 'Montserrat Alternates';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 1.7vw;
+	line-height: 49px;
+	color: #FFFFFF;
+}
+
+.address {
+	font-family: Montserrat Alternates;
+	font-weight: 500;
+	font-style: normal;
+	font-size: 1.5vw;
+	line-height: 49px;
+	color: #FFFFFF;
+}
+
+.telephone {
+	font-family: 'Montserrat Alternates';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 1.7vw;
+	line-height: 49px;
+	color: #FFFFFF;
+}
+
+.whatsapp {
+	font-family: 'Montserrat Alternates';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 1.7vw;
+	line-height: 49px;
+	color: #FFFFFF;
+}
+
+
+
+.social-icons {
+	padding-top: 25px;
+}
+
+.social-icons img {
+	width: 40px;
+	height: 40px;
 }

@@ -58,6 +58,103 @@ a {
 }
 
 /* Меню навигации */
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .35s, visibility .35s, height .35s;
+    overflow: hidden;
+    background: black;
+    z-index: -1;
+}
+
+#hamburger-input{
+	display: none;
+  }
+  
+  #hamburger-menu {
+	  position: fixed;
+	  top: 20px;
+	  right: 20px;
+	  width: 50px;
+	  height: 50px;
+	  display: none;
+	  border: none;
+	  padding: 0px;
+	  margin: 0px;
+	  font-family: 'Cabin', Sans-serif;
+	  background: linear-gradient(
+		to bottom, 
+		#9b9b9b, #9b9b9b 20%, 
+		rgb(0, 0, 0) 20%, rgb(0, 0, 0) 40%, 
+		#9b9b9b 40%, #9b9b9b 60%, 
+		rgb(0, 0, 0) 60%, rgb(0, 0, 0) 80%, 
+		#9b9b9b 80%, #9b9b9b 100%
+	  );
+
+	  z-index: 999999;
+  }
+  
+  #hamburger-menu #sidebar-menu {
+	  visibility: hidden;
+	  position: fixed;
+	  top: 0;
+	  right: -250px;
+	  width: 200px;
+	  height: 100%;
+	  background-color: #8d8d8d;
+	  transition: 0.3s;
+	  padding: 0px 10px;
+	  box-sizing: border-box;
+  }
+  
+  #hamburger-menu h3 {
+	color: #ffffff;
+	font-size: 2.2rem;
+  }
+  
+  #hamburger-menu ul {
+	padding-left: 0px;
+  }
+  
+  #hamburger-menu li {
+	list-style-type: none;
+	line-height: 3rem;
+  }
+  
+  #hamburger-menu a {
+	color: #ffffff;
+	font-size: 1.3rem;
+	text-decoration: none;
+  }
+  
+  #hamburger-menu a:hover {
+	text-decoration: underline;
+  }
+  
+  #hamburger-input:checked + #hamburger-menu #sidebar-menu {
+	  visibility: visible;
+	  right: 0;
+  }
+  #hamburger-input:checked ~ .overlay{
+	 visibility: visible;
+	opacity: 0.4;
+  }
+  
+  
+  @media screen and (max-width: 1000px) {
+	.menu {
+	  display: none;
+	}
+	#hamburger-menu {
+	  display: inline;
+	}
+  }
+
 
 .menu ul {
 	display: flex;
@@ -94,7 +191,7 @@ a {
 	font-family: 'Montserrat Alternates', sans-serif;
 	font-style: normal;
 	font-weight: 700;
-	font-size: 3rem;
+	font-size: 3.2vw;
 	line-height: 55px;
 	text-align: right;
 
@@ -107,7 +204,7 @@ a {
 	font-family: 'Overpass', sans-serif;
 	font-style: normal;
 	font-weight: 400;
-	font-size: 1.2rem;
+	font-size: 1.4vw;
 	line-height: 25px;
 	text-align: right;
 
@@ -226,7 +323,7 @@ a {
 
 /* Отзывы */
 .reviews {
-	padding-bottom: 1000px;
+	padding-bottom: 5%;
 }
 
 .reviews p {
@@ -244,29 +341,27 @@ a {
 }
 
 .slider {
-	background-color: #a6a6a6;
-
 	position: relative;
+	top: 50%;
 
-	height: 300px;
+	height: 50%;
 }
 
 .slider-container {
 	position: relative;
 
 	width: 100%;
-	height: 100%;
+	height: 50vh;
 
 	overflow: hidden;
 }
 
-.slide {
-	cursor: pointer;
 
+/* Отзывы */
+.slide {
 	position: absolute;
 
-	width: 300px;
-	height: 150px;
+	width: 30vw;
 
 	background-color: white;
 	border: 3px solid #333333;
@@ -278,6 +373,171 @@ a {
 	transition: all .5s;
 }
 
+.top {
+	display: flex;
+}
+
+.profile-1 {
+	width: 60px;
+	height: 60px;
+
+	margin-left: 5px;
+	margin-top: 5px;
+
+	margin-right: 8vw;
+
+	border-radius: 50%;
+
+	background-image: url('../images/peoples/pchel1.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.profile-2 {
+	width: 60px;
+	height: 60px;
+
+	margin-left: 5px;
+	margin-top: 5px;
+
+	margin-right: 8vw;
+
+	border-radius: 50%;
+
+	background-image: url('../images/peoples/pchel2.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.profile-3 {
+	width: 60px;
+	height: 60px;
+
+	margin-left: 5px;
+	margin-top: 5px;
+
+	margin-right: 8vw;
+
+	border-radius: 50%;
+
+	background-image: url('../images/peoples/pchel3.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.profile-4 {
+	width: 60px;
+	height: 60px;
+
+	margin-left: 5px;
+	margin-top: 5px;
+
+	margin-right: 8vw;
+
+	border-radius: 50%;
+
+	background-image: url('../images/peoples/pchel4.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.profile-5 {
+	width: 60px;
+	height: 60px;
+
+	margin-left: 5px;
+	margin-top: 5px;
+
+	margin-right: 8vw;
+
+	border-radius: 50%;
+
+	background-image: url('../images/peoples/pchel5.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.profile-6 {
+	width: 60px;
+	height: 60px;
+
+	margin-left: 5px;
+	margin-top: 5px;
+
+	margin-right: 8vw;
+
+	border-radius: 50%;
+
+	background-image: url('../images/peoples/pchel6.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.profile-7 {
+	width: 60px;
+	height: 60px;
+
+	margin-left: 5px;
+	margin-top: 5px;
+
+	margin-right: 8vw;
+
+	border-radius: 50%;
+
+	background-image: url('../images/peoples/pchel7.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.profile-8 {
+	width: 60px;
+	height: 60px;
+
+	margin-left: 5px;
+	margin-top: 5px;
+
+	margin-right: 8vw;
+
+	border-radius: 50%;
+
+	background-image: url('../images/peoples/pchel8.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.profile-9 {
+	width: 60px;
+	height: 60px;
+
+	margin-left: 5px;
+	margin-top: 5px;
+
+	margin-right: 8vw;
+
+	border-radius: 50%;
+
+	background-image: url('../images/peoples/pchel9.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.slide p {
+	font-size: .8vw;
+}
+
+.user-name p {
+	font-size: 1.2vw;
+}
+
 .slider-nav {
 	color: #333333;
 
@@ -286,12 +546,100 @@ a {
 	font-size: 40px;
 }
 
+.slider iconify-icon {
+	color: black;
+
+	font-size: 2vw;
+}
+
 .action-prev {
 	left: 20px;
 	bottom: 50%;
+	z-index: 999;
 }
 
 .action-next {
 	right: 20px;
-	bottom: 20px;
+	bottom: 50%;
+	z-index: 999;
+}
+
+
+
+/* Дно сайта */
+
+footer {
+	width: 100%;
+
+	padding-top: 4%;
+	padding-bottom: 3%;
+
+	background-color: #2F2F2F;
+
+	display: flex;
+	justify-content: space-around;
+}
+
+footer img {
+	width: 25px;
+	height: 25px;
+
+	padding-right: 15px;
+}
+
+.title-footer {
+	text-align: center;
+	font-family: 'Montserrat Alternates';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 2.5vw;
+	line-height: 49px;
+	color: #FFFFFF;
+}
+
+.mail {
+	font-family: 'Montserrat Alternates';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 1.7vw;
+	line-height: 49px;
+	color: #FFFFFF;
+}
+
+.address {
+	font-family: Montserrat Alternates;
+	font-weight: 500;
+	font-style: normal;
+	font-size: 1.5vw;
+	line-height: 49px;
+	color: #FFFFFF;
+}
+
+.telephone {
+	font-family: 'Montserrat Alternates';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 1.7vw;
+	line-height: 49px;
+	color: #FFFFFF;
+}
+
+.whatsapp {
+	font-family: 'Montserrat Alternates';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 1.7vw;
+	line-height: 49px;
+	color: #FFFFFF;
+}
+
+
+
+.social-icons {
+	padding-top: 25px;
+}
+
+.social-icons img {
+	width: 40px;
+	height: 40px;
 }

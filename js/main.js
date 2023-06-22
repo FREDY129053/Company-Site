@@ -34,7 +34,7 @@ function init()
 
 		slide.dataset.order = i;
 		slide.style.transform = "translate(-50%, -50%)";
-		slide.addEventListener("click", clickHandler);
+		//slide.addEventListener("click", clickHandler);
 	}
 
 	for (const navigation of navigations)
